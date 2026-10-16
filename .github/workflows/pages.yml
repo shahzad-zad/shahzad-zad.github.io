@@ -23,6 +23,8 @@ jobs:
           node-version: 24
       - name: Check resource paths
         run: node scripts/verify-static.cjs
+      - name: Refresh browser asset versions
+        run: node scripts/version-assets.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
