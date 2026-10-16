@@ -8,7 +8,8 @@ for(const file of walk(site).filter(f=>f.endsWith('.html'))){
   if(/^(?:[a-z]+:|\/\/)/i.test(url))return all;
   const asset=path.resolve(path.dirname(file),url);
   if(!fs.existsSync(asset))throw Error('Missing asset '+url);
-  const version=crypto.createHash('sha256').update(fs.readFileSync(asset)).digest('hex').slice(0,12);
+  const content=fs.readFileSync(asset,'utf8').replace(/\r\n/g,'\n');
+  const version=crypto.createHash('sha256').update(content).digest('hex').slice(0,12);
   return start+url+'?v='+version+end;
  });
  if(html!==original){fs.writeFileSync(file,html);count++;}
