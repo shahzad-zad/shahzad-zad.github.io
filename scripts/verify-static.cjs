@@ -9,7 +9,7 @@ if(new Set(resources.map(r=>r.id)).size!==resources.length)errors.push('Duplicat
 for(const r of resources){
  const target=path.resolve(site,r.url.split(/[?#]/)[0]);
  if(!target.startsWith(site+path.sep)||!fs.existsSync(target))errors.push('Missing/unsafe resource: '+r.id);
- if(![9,10,11,12].includes(r.class)||!['notes','cards','mcqs','practice','bank'].includes(r.type))errors.push('Invalid metadata: '+r.id);
+ if(![9,10,11,12].includes(r.class)||!['notes','cards','mcqs','activities','practice','bank'].includes(r.type))errors.push('Invalid metadata: '+r.id);
 }
 for(const file of files.filter(f=>f.endsWith('.html'))){
  const html=fs.readFileSync(file,'utf8');

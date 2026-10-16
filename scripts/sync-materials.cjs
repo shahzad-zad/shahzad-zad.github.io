@@ -42,6 +42,7 @@ const publicResources = resources.map(({source,...r})=>r);
 write('site/data/catalog.js','window.LEARNING_HUB = '+JSON.stringify({profile,resources:publicResources},null,2)+';\n');
 write('portfolio-reference/README.md',"# Portfolio reference copy\n\nCopied from F:/My Portfolio/portfolio website/shahzad-portfolio. Includes public content data and selected presentation source files. This local reference is excluded from Git and is not published. The student website adapts the profile biography, qualifications in home-client.tsx, first three research descriptions, and the supplied header artwork. The original portfolio remains untouched. Server CMS code, credentials, dependencies, build caches and CV files are not copied.\n");
 console.log(`Synced ${resources.length} resources, 32 notes sections, two chapter pages, two MCQ banks and portfolio profile content.`);
+require('./sync-chapter3.cjs');
 
 require('./build-portfolio.cjs');
 

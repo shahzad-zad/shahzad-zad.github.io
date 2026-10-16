@@ -41,3 +41,4 @@ for(const p of walk(site).filter(p=>p.endsWith('.html'))){
 }
 const oldLogo=path.join(site,'assets/logo.png');if(fs.existsSync(oldLogo))fs.unlinkSync(oldLogo);
 console.log('Built full Notes, Cards and MCQs for all four prepared chapters: '+resources.length+' chapter sections.');
+require('./sync-chapter3.cjs');

@@ -165,6 +165,102 @@ window.LEARNING_HUB={
       "description": "Select an answer and learn from the explanation. Practise the whole chapter or choose a topic.",
       "url": "study.html?class=12&chapter=2&mode=mcqs",
       "detail": "60 MCQs · Explanations included"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-11-ch3-notes",
+      "title": "Dynamics Notes",
+      "type": "notes",
+      "description": "Full chapter notes with worked examples and concept explanations.",
+      "url": "materials/class-11/chapter-3/index.html?view=notes",
+      "detail": "29 sections · Print available"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-11-ch3-cards",
+      "title": "Dynamics Cards",
+      "type": "cards",
+      "description": "Tap to flip each card and reveal the answer and explanation.",
+      "url": "materials/class-11/chapter-3/index.html?view=cards",
+      "detail": "40 flip cards"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-11-ch3-mcqs",
+      "title": "Dynamics Mcqs",
+      "type": "mcqs",
+      "description": "Choose a topic and difficulty, answer MCQs, and review explanations.",
+      "url": "materials/class-11/chapter-3/index.html?view=mcqs",
+      "detail": "138 MCQs · Explanations included"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-11-ch3-activities",
+      "title": "Dynamics Activities",
+      "type": "activities",
+      "description": "Explore concepts with interactive diagrams, controls and calculations.",
+      "url": "materials/class-11/chapter-3/index.html?view=activities",
+      "detail": "5 interactive activities"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-12-ch3-notes",
+      "title": "Second Law of Thermodynamics Notes",
+      "type": "notes",
+      "description": "Full chapter notes with worked examples and concept explanations.",
+      "url": "materials/class-12/chapter-3/index.html?view=notes",
+      "detail": "32 sections · Print available"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-12-ch3-cards",
+      "title": "Second Law of Thermodynamics Cards",
+      "type": "cards",
+      "description": "Tap to flip each card and reveal the answer and explanation.",
+      "url": "materials/class-12/chapter-3/index.html?view=cards",
+      "detail": "44 flip cards"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-12-ch3-mcqs",
+      "title": "Second Law of Thermodynamics Mcqs",
+      "type": "mcqs",
+      "description": "Choose a topic and difficulty, answer MCQs, and review explanations.",
+      "url": "materials/class-12/chapter-3/index.html?view=mcqs",
+      "detail": "142 MCQs · Explanations included"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 3,
+      "format": "HTML",
+      "id": "class-12-ch3-activities",
+      "title": "Second Law of Thermodynamics Activities",
+      "type": "activities",
+      "description": "Explore concepts with interactive diagrams, controls and calculations.",
+      "url": "materials/class-12/chapter-3/index.html?view=activities",
+      "detail": "5 interactive activities"
     }
   ]
 };
