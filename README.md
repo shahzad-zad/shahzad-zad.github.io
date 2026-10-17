@@ -22,6 +22,8 @@ The Portfolio navigation link and homepage picture open `portfolio.html`, contai
 | 12 | First Law of Thermodynamics | 16 notes sections, 36 flip cards, 60 MCQs |
 | 11 | Dynamics Chapter 3 | 29 notes sections, 40 flip cards, 138 MCQs, 5 activities |
 | 12 | Second Law of Thermodynamics Chapter 3 | 32 notes sections, 44 flip cards, 142 MCQs, 5 activities |
+| 11 | Rotational and Circular Motion Chapter 4 | 36 notes sections, 54 flip cards, 119 MCQs, 5 activities |
+| 12 | Magnetic Fields Chapter 4 | 33 notes sections, 48 flip cards, 121 MCQs, 7 activities |
 
 ## Maintain
 

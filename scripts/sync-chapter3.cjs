@@ -22,4 +22,4 @@ fs.copyFileSync(path.join(workspace,'Chapter-3-Preparation/docs/entry-test-sourc
 fs.writeFileSync(catalogPath,'window.LEARNING_HUB='+JSON.stringify(catalog,null,2)+';\n');
 fs.writeFileSync(path.join(root,'content/resources.json'),JSON.stringify(catalog.resources,null,2)+'\n');
 console.log('Synced both Chapter 3 pages and eight resource cards.');
-require('./version-assets.cjs');
+require('./sync-chapter4.cjs');
