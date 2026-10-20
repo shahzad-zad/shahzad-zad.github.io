@@ -40,6 +40,7 @@
   }save();
  }
  function render(){
+  document.body.classList.toggle('activities-mode',state.view==='activities');
   if(state.view!=='activities')window.LABS.stop();
   document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.view===state.view)));
   for(const view of ['notes','study','activities'])$(view+'-view').hidden=view!==(state.view==='mcqs'||state.view==='cards'?'study':state.view);
@@ -67,3 +68,5 @@
  let beforePrint=[];addEventListener('beforeprint',()=>{beforePrint=[...document.querySelectorAll('.note')].map(n=>n.open);document.querySelectorAll('.note').forEach(n=>n.open=true);});addEventListener('afterprint',()=>document.querySelectorAll('.note').forEach((n,i)=>n.open=beforePrint[i]??false));
  window.CHAPTER_APP={switchView,render};render();
 })();
+
+if(new URLSearchParams(location.search).get("view")==="activities"){const lab=new URLSearchParams(location.search).get("lab");if(lab)window.LABS.open(lab);}
