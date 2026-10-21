@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path'),vm=require('vm');
 const root=path.resolve(__dirname,'..'),workspace=path.dirname(root),site=path.join(root,'site'),source=path.join(workspace,'Chapter-2-Activities');
 const {html}=require(path.join(source,'scripts/build.cjs'));
 const dest=path.join(site,'materials/chapter-2-activities');fs.mkdirSync(dest,{recursive:true});
-for(const file of ['app.js','styles.css'])fs.copyFileSync(path.join(source,'assets',file),path.join(dest,file));
+for(const file of ['app.js','styles.css','thermo-apparatus.js'])fs.copyFileSync(path.join(source,'assets',file),path.join(dest,file));
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(site,'data/catalog.js'),'utf8'),context);const catalog=context.window.LEARNING_HUB;
 catalog.resources=catalog.resources.filter(r=>!(r.chapter===2&&[11,12].includes(r.class)&&r.type==='activities'));
 for(const grade of [11,12]){
