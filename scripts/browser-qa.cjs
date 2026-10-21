@@ -31,7 +31,7 @@ const base=process.argv[2]||'http://127.0.0.1:8767/';
    await assert("document.activeElement===document.querySelector('.teacher-picture-link')",size.name+' About your teacher tooltip works on keyboard focus');
    for(const grade of [9,10,11,12]){
      await go('class.html?class='+grade);
-     await assert(`document.querySelectorAll('.chapter-card').length===${grade>=11?3:1}&&document.querySelectorAll('.resource-card').length===0&&document.getElementById('class-title').textContent==='Class ${grade}'`,size.name+' class '+grade+' opens chapter cards');
+     await assert(`document.querySelectorAll('.chapter-card').length===${grade>=11?4:1}&&document.querySelectorAll('.resource-card').length===0&&document.getElementById('class-title').textContent==='Class ${grade}'`,size.name+' class '+grade+' opens chapter cards');
      await assert('document.documentElement.scrollWidth<=innerWidth',size.name+' class '+grade+' fits viewport');
      await assert("getComputedStyle(document.querySelector('.chapter-card')).display==='grid'&&[...document.querySelectorAll('.chapter-card')].every(c=>c.scrollWidth<=c.clientWidth)",size.name+' chapter cards stack without clipped content');
      if(grade===11)await shot('class-'+size.name);
@@ -47,13 +47,14 @@ const base=process.argv[2]||'http://127.0.0.1:8767/';
      }
    }
  }
+ for(const grade of [12,11]){await go(`chapter.html?class=${grade}&chapter=5&subject=Physics`);await assert("document.querySelectorAll('.resource-card').length===4",'Chapter 5 four sections '+grade);await assert("[...document.querySelectorAll('.resource-bottom a')].every(a=>a.href.includes('/chapter-5/index.html?view='))",'Chapter 5 matching destinations '+grade);}
  await go('class.html?class=11');
  await evaluate("document.getElementById('search').value='projectiles';document.getElementById('search').dispatchEvent(new Event('input'))");
  await assert("document.querySelectorAll('.chapter-card').length===1&&document.body.textContent.includes('Kinematics')",'search is scoped to selected class');
  await evaluate("document.getElementById('search').value='zzzznoresource';document.getElementById('search').dispatchEvent(new Event('input'))");
  await assert("!document.getElementById('empty-state').hidden&&document.querySelectorAll('.resource-card').length===0",'class search empty state');
  await evaluate("document.getElementById('empty-reset').click()");
- await assert("document.querySelectorAll('.chapter-card').length===3",'clear search keeps selected class');
+ await assert("document.querySelectorAll('.chapter-card').length===4",'clear search keeps selected class');
  await go('class.html?class=12&q=heat');await assert("document.querySelectorAll('.chapter-card').length===1",'bookmarked class search restores');
  await go('chapter.html?class=11&chapter=2&subject=Physics&q=projectiles');await assert("document.querySelectorAll('.resource-card').length===2",'chapter search filters resource cards');
  await go('chapter.html?class=11&chapter=99');await assert("document.getElementById('class-search').hidden",'invalid chapter handled');

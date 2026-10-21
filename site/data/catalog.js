@@ -381,6 +381,102 @@ window.LEARNING_HUB={
       "description": "Explore energy balance, piston processes, PV paths, calorimetry and heat capacities.",
       "url": "materials/class-12/chapter-2/activities.html",
       "detail": "5 interactive activities"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-12-ch5-notes",
+      "title": "Electromagnetic Induction Notes",
+      "type": "notes",
+      "description": "Full chapter notes with worked examples and concept explanations.",
+      "url": "materials/class-12/chapter-5/index.html?view=notes",
+      "detail": "38 sections · Print available"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-12-ch5-cards",
+      "title": "Electromagnetic Induction Cards",
+      "type": "cards",
+      "description": "Tap to flip each card and reveal the answer and explanation.",
+      "url": "materials/class-12/chapter-5/index.html?view=cards",
+      "detail": "49 flip cards"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-12-ch5-mcqs",
+      "title": "Electromagnetic Induction Mcqs",
+      "type": "mcqs",
+      "description": "Choose a topic and difficulty, answer MCQs, and review explanations.",
+      "url": "materials/class-12/chapter-5/index.html?view=mcqs",
+      "detail": "122 MCQs · Explanations included"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-12-ch5-activities",
+      "title": "Electromagnetic Induction Activities",
+      "type": "activities",
+      "description": "Explore concepts with interactive diagrams, controls and calculations.",
+      "url": "materials/class-12/chapter-5/index.html?view=activities",
+      "detail": "9 interactive activities"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-11-ch5-notes",
+      "title": "Work, Energy and Power Notes",
+      "type": "notes",
+      "description": "Full chapter notes with worked examples and concept explanations.",
+      "url": "materials/class-11/chapter-5/index.html?view=notes",
+      "detail": "34 sections · Print available"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-11-ch5-cards",
+      "title": "Work, Energy and Power Cards",
+      "type": "cards",
+      "description": "Tap to flip each card and reveal the answer and explanation.",
+      "url": "materials/class-11/chapter-5/index.html?view=cards",
+      "detail": "47 flip cards"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-11-ch5-mcqs",
+      "title": "Work, Energy and Power Mcqs",
+      "type": "mcqs",
+      "description": "Choose a topic and difficulty, answer MCQs, and review explanations.",
+      "url": "materials/class-11/chapter-5/index.html?view=mcqs",
+      "detail": "113 MCQs · Explanations included"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 5,
+      "format": "HTML",
+      "id": "class-11-ch5-activities",
+      "title": "Work, Energy and Power Activities",
+      "type": "activities",
+      "description": "Explore concepts with interactive diagrams, controls and calculations.",
+      "url": "materials/class-11/chapter-5/index.html?view=activities",
+      "detail": "7 interactive activities"
     }
   ]
 };

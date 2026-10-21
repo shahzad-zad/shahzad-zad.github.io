@@ -25,6 +25,9 @@ The Portfolio navigation link and homepage picture open `portfolio.html`, contai
 | 11 | Rotational and Circular Motion Chapter 4 | 36 notes sections, 54 flip cards, 119 MCQs, 5 activities |
 | 12 | Magnetic Fields Chapter 4 | 33 notes sections, 48 flip cards, 121 MCQs, 7 activities |
 
+| 11 | Work, Energy and Power Chapter 5 | 34 notes sections, 47 flip cards, 113 MCQs, 7 activities |
+| 12 | Electromagnetic Induction Chapter 5 | 38 notes sections, 49 flip cards, 122 MCQs, 9 activities |
+
 ## Maintain
 
 `site` is the only published folder. `content/resources.json` defines class resources. `scripts/sync-materials.cjs` refreshes the teaching copies, new personal logo, generated notes and separate portfolio. The original class files and portfolio remain untouched. Question prompts, answers and explanations are preserved when generating the study screens. Personal logo source: `../Educators-Master/assets/new-logo.png`.
@@ -35,8 +38,10 @@ The local `portfolio-reference` and `tmp` folders are excluded from Git. The ori
 
 ## Chapter cards
 
-Navigation is Class card → numerically ordered chapter cards → resource cards for Notes, Cards and MCQs, plus Activities in Chapter 3. Each class has its own search, and each chapter shows only its relevant resources. Chapters are grouped by subject and chapter number and sorted by chapter number. Chapter 2 is available in each class; Chapter 3 is also available in Classes 11 and 12.
+Navigation is Class card → numerically ordered chapter cards → resource cards for Notes, Cards and MCQs, plus Activities in Chapters 2?5 for Classes 11/12. Each class has its own search, and each chapter shows only its relevant resources. Chapters are grouped by subject and chapter number and sorted by chapter number. Chapter 2 is available in each class; Chapters 3, 4 and 5 are also available in Classes 11 and 12.
 
 Run `node scripts/sync-chapter3.cjs` after updating the prepared Class 11 or 12 Chapter 3 files. This copies the complete interactive pages, assets and coverage documentation, and updates both catalogues. The other content builders also call this sync so subsequent builds preserve Chapter 3. Chapter 3 browser checks: `node scripts/browser-qa-chapter3.cjs http://127.0.0.1:8767/`.
 
 Chapter 2 activities are authored in `../Chapter-2-Activities`. Chapter sync also builds and copies these pages and preserves their catalogue entries. Activity checks: `node ../Chapter-2-Activities/scripts/browser-qa.cjs` against the workspace preview server on port 8768. Each Class 11/12 Chapter 2 resource section contains Notes, Cards, MCQs and Activities. Test papers remain excluded.
+
+Chapter 5 authoring and the reusable preparation protocol are in `../Chapter-5-Preparation` and `../Educators-Master/docs/chapter-preparation-protocol.md`. Sync with `node scripts/sync-chapter5.cjs`, then `node scripts/version-assets.cjs`; normal Chapter 3/4 sync also preserves it.

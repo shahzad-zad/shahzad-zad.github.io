@@ -23,4 +23,5 @@ fs.writeFileSync(catalogPath,'window.LEARNING_HUB='+JSON.stringify(catalog,null,
 fs.writeFileSync(path.join(root,'content/resources.json'),JSON.stringify(catalog.resources,null,2)+'\n');
 console.log('Synced both Chapter 4 pages and eight resource cards.');
 require('./sync-chapter2-activities.cjs');
+require('./sync-chapter5.cjs');
 require('./version-assets.cjs');
