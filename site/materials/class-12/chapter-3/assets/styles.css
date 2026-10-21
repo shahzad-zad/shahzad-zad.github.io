@@ -25,3 +25,35 @@
 @media(prefers-reduced-motion:reduce){.lab-scene .orbiter{animation:none!important}}
 @media(min-width:1000px) and (max-height:740px){.activities-mode .wrap{padding-top:12px}.lab-top{margin-bottom:12px}.lab-scene .diagram svg{max-height:235px}.lab-visuals.with-graph .diagram svg{max-height:210px}}
 @media(max-width:650px){.lab[data-lab=collision] .diagram svg text{font-size:22px}.lab[data-lab=collision] .diagram #collision-phase{font-size:18px}.collision-outcome{gap:6px 14px}.collision-outcome>span{flex-basis:100%;text-align:center}.collision-outcome>span:last-child{display:none}}
+
+/* Keep the diagram central and the readouts in a dedicated right-hand rail. */
+.lab-workspace{display:grid;grid-template-columns:minmax(0,1fr) 174px;gap:12px;align-items:start}
+.lab-workspace .lab-results,.lab[data-lab=collision] .lab-results{display:grid;grid-template-columns:1fr;margin:0;gap:8px}
+.lab-workspace .metric{padding:12px;min-height:76px;border:1px solid #30445b;background:#112131}
+.lab-workspace .metric strong{font-size:clamp(22px,2.2vw,32px);color:#f7fbff;overflow-wrap:anywhere}
+.lab-workspace .metric span{font-size:11px;line-height:1.4}
+.lab[data-lab=collision] .metric:nth-child(-n+2){background:#17302e}
+.lab[data-lab=collision] .metric:first-child strong{color:#ffcd38}
+.lab[data-lab=collision] .metric:nth-child(2) strong{color:#55dfff}
+.lab-workspace .metric strong:not(:has(small)){font-size:22px}
+.lab-scene-top{justify-content:flex-end;min-height:0;padding:8px 10px;border-bottom:0}
+.lab-scene-top:has(.lab-actions:empty){display:none}
+.lab-scene-top:has(.lab-actions:not(:empty)){border-bottom:1px solid var(--line)}
+.lab-scene .diagram{padding:10px 6px}
+.lab-scene .diagram svg{min-height:210px;max-height:320px}
+.lab-visuals.with-graph{grid-template-columns:1fr}
+.lab-visuals .live-graph{border-left:0;border-top:1px solid var(--line)}
+.lab-visuals.with-graph .diagram svg{min-height:0;max-height:190px}
+.lab-visuals .live-graph svg{max-height:145px}
+.lab-scene.is-playing{border-color:#4b7b9e}
+.collision-outcome strong{color:#ffcd38}.collision-outcome strong:nth-of-type(2){color:#55dfff}
+.lab[data-lab=pairs] .diagram svg{min-height:280px}
+.lab[data-lab=particle] .metric{padding:8px 10px;min-height:62px}.lab[data-lab=particle] .metric strong{font-size:23px!important;white-space:nowrap;overflow-wrap:normal}
+@media(min-width:1000px){.lab-columns{grid-template-columns:220px minmax(0,1fr);gap:16px}.lab-workspace .metric:has(strong small) strong{font-size:30px}}
+@media(min-width:1000px) and (max-height:740px){.lab-workspace .metric{min-height:65px;padding:9px 11px}.lab-visuals.with-graph .diagram svg{max-height:160px}.lab-visuals .live-graph svg{max-height:125px}.lab-scene .diagram svg{max-height:290px}}
+@media(min-width:651px) and (max-width:1100px){.lab-columns{grid-template-columns:185px minmax(0,1fr);gap:12px}.lab-workspace{grid-template-columns:minmax(0,1fr) 145px;gap:8px}.lab-workspace .metric{padding:10px}.lab-workspace .metric strong{font-size:23px}}
+@media(max-width:1100px){.lab[data-lab=particle] .metric strong{font-size:20px!important}}
+@media(max-width:650px){.lab-workspace{grid-template-columns:1fr}.lab-workspace .lab-results,.lab[data-lab=collision] .lab-results{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-workspace .metric{min-height:74px}.lab-visuals.with-graph{grid-template-columns:1fr 1fr}.lab-visuals .live-graph{border-top:0;border-left:1px solid var(--line)}.lab-scene .diagram svg{min-height:170px;max-height:260px}.lab[data-lab=pairs] .diagram svg{min-height:210px}.lab-visuals.with-graph .diagram svg{min-height:0}.lab-scene-top{padding:8px 10px}}
+@media(min-width:651px) and (max-width:999px){.lab-columns{grid-template-columns:1fr}.lab-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.lab-controls-title{grid-column:1/-1}.lab-controls .button{align-self:end}.lab-workspace{grid-template-columns:minmax(0,1fr) 155px}.lab-controls label{font-size:12px}}
+@media(min-width:1000px){.lab-visuals.with-graph{grid-template-columns:1fr 1fr}.lab-visuals .live-graph{border-top:0;border-left:1px solid var(--line)}.lab-visuals.with-graph .diagram svg{max-height:255px}.lab-visuals .live-graph svg{max-height:240px}}
+@media(max-width:650px){.lab-visuals.with-graph{grid-template-columns:1fr}.lab-visuals .live-graph{border-left:0;border-top:1px solid var(--line)}.lab-visuals .live-graph svg{max-height:210px}.lab-visuals .live-graph h3{font-size:12px}}
