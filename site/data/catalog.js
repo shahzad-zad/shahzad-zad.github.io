@@ -357,6 +357,30 @@ window.LEARNING_HUB={
       "description": "Explore concepts with interactive diagrams, controls and calculations.",
       "url": "materials/class-12/chapter-4/index.html?view=activities",
       "detail": "7 interactive activities"
+    },
+    {
+      "class": 11,
+      "subject": "Physics",
+      "chapter": 2,
+      "format": "HTML",
+      "id": "class-11-ch2-activities",
+      "title": "Kinematics Activities",
+      "type": "activities",
+      "description": "Build concepts with vectors, motion graphs, free fall, projectiles and relative velocity.",
+      "url": "materials/class-11/chapter-2/activities.html",
+      "detail": "6 interactive activities"
+    },
+    {
+      "class": 12,
+      "subject": "Physics",
+      "chapter": 2,
+      "format": "HTML",
+      "id": "class-12-ch2-activities",
+      "title": "First Law of Thermodynamics Activities",
+      "type": "activities",
+      "description": "Explore energy balance, piston processes, PV paths, calorimetry and heat capacities.",
+      "url": "materials/class-12/chapter-2/activities.html",
+      "detail": "5 interactive activities"
     }
   ]
 };

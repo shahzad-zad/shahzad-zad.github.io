@@ -36,7 +36,7 @@ const base=process.argv[2]||'http://127.0.0.1:8767/';
      await assert("getComputedStyle(document.querySelector('.chapter-card')).display==='grid'&&[...document.querySelectorAll('.chapter-card')].every(c=>c.scrollWidth<=c.clientWidth)",size.name+' chapter cards stack without clipped content');
      if(grade===11)await shot('class-'+size.name);
      const href=await evaluate("document.querySelector('.chapter-card').getAttribute('href')");await go(href);
-     await assert(`document.querySelectorAll('.resource-card').length===3&&document.getElementById('class-title').textContent.startsWith('Chapter 2:')`,size.name+' class '+grade+' chapter opens relevant resource cards');
+     await assert(`document.querySelectorAll('.resource-card').length===${grade>=11?4:3}&&document.getElementById('class-title').textContent.startsWith('Chapter 2:')`,size.name+' class '+grade+' chapter opens relevant resource cards');
      await assert('document.documentElement.scrollWidth<=innerWidth',size.name+' chapter '+grade+' fits viewport');
      if(grade===11)await shot('chapter-'+size.name);
      if(grade>=11){
@@ -55,7 +55,7 @@ const base=process.argv[2]||'http://127.0.0.1:8767/';
  await evaluate("document.getElementById('empty-reset').click()");
  await assert("document.querySelectorAll('.chapter-card').length===3",'clear search keeps selected class');
  await go('class.html?class=12&q=heat');await assert("document.querySelectorAll('.chapter-card').length===1",'bookmarked class search restores');
- await go('chapter.html?class=11&chapter=2&subject=Physics&q=projectiles');await assert("document.querySelectorAll('.resource-card').length===1",'chapter search filters resource cards');
+ await go('chapter.html?class=11&chapter=2&subject=Physics&q=projectiles');await assert("document.querySelectorAll('.resource-card').length===2",'chapter search filters resource cards');
  await go('chapter.html?class=11&chapter=99');await assert("document.getElementById('class-search').hidden",'invalid chapter handled');
  await go('class.html?class=invalid');await assert("document.getElementById('class-search').hidden",'invalid class handled');
  await go('portfolio.html');

@@ -18,8 +18,8 @@ The Portfolio navigation link and homepage picture open `portfolio.html`, contai
 | --- | --- | --- |
 | 9 | Kinematics | 16 notes sections, 50 flip cards, 50 MCQs |
 | 10 | Sound | 16 notes sections, 50 flip cards, 50 MCQs |
-| 11 | Kinematics | 16 notes sections, 36 flip cards, 60 MCQs |
-| 12 | First Law of Thermodynamics | 16 notes sections, 36 flip cards, 60 MCQs |
+| 11 | Kinematics | 16 notes sections, 36 flip cards, 60 MCQs, 6 activities |
+| 12 | First Law of Thermodynamics | 16 notes sections, 36 flip cards, 60 MCQs, 5 activities |
 | 11 | Dynamics Chapter 3 | 29 notes sections, 40 flip cards, 138 MCQs, 5 activities |
 | 12 | Second Law of Thermodynamics Chapter 3 | 32 notes sections, 44 flip cards, 142 MCQs, 5 activities |
 | 11 | Rotational and Circular Motion Chapter 4 | 36 notes sections, 54 flip cards, 119 MCQs, 5 activities |
@@ -38,3 +38,5 @@ The local `portfolio-reference` and `tmp` folders are excluded from Git. The ori
 Navigation is Class card → numerically ordered chapter cards → resource cards for Notes, Cards and MCQs, plus Activities in Chapter 3. Each class has its own search, and each chapter shows only its relevant resources. Chapters are grouped by subject and chapter number and sorted by chapter number. Chapter 2 is available in each class; Chapter 3 is also available in Classes 11 and 12.
 
 Run `node scripts/sync-chapter3.cjs` after updating the prepared Class 11 or 12 Chapter 3 files. This copies the complete interactive pages, assets and coverage documentation, and updates both catalogues. The other content builders also call this sync so subsequent builds preserve Chapter 3. Chapter 3 browser checks: `node scripts/browser-qa-chapter3.cjs http://127.0.0.1:8767/`.
+
+Chapter 2 activities are authored in `../Chapter-2-Activities`. Chapter sync also builds and copies these pages and preserves their catalogue entries. Activity checks: `node ../Chapter-2-Activities/scripts/browser-qa.cjs` against the workspace preview server on port 8768. Each Class 11/12 Chapter 2 resource section contains Notes, Cards, MCQs and Activities. Test papers remain excluded.
